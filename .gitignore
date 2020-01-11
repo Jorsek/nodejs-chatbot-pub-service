@@ -5,6 +5,7 @@ dist
 *.lock
 npm-debug.log
 .env
+coverage
 
 # Compiled source #
 ###################

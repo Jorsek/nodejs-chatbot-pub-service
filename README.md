@@ -1,2 +1,2 @@
-# nodejs-dialogflow-pub-service
+# nodejs-chatbot-pub-service
 A publishing service for pushing DITA content to Dialogflow

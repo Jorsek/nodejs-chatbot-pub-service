@@ -1,0 +1,447 @@
+[
+	{
+		"content": "<body id=\"topic-3435\"><main role=\"main\"><article role=\"article\" aria-labelledby=\"ariaid-title1\">\n    <h1 class=\"title question topictitle1\" id=\"ariaid-title1\">What specific services are being purchased by the Vendor from Google (since Google has a number of “ala carte” options)?</h1>\n    <div class=\"body conbody answer\">\n        <ul class=\"ul\">\n            <li class=\"li\">\n                <p class=\"p\"> Compute Instances</p>\n            </li>\n            <li class=\"li\">\n                <p class=\"p\"> Persistent disks</p>\n            </li>\n            <li class=\"li\">\n                <p class=\"p\">Managed SQL</p>\n            </li>\n        </ul>\n    </div>\n</article></main></body>",
+		"breadcrumbs": [
+			{
+				"title": "",
+				"href": "",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": []
+			},
+			{
+				"title": "What specific services are being purchased by the Vendor from Google (since Google has a number of “ala carte” options)?",
+				"href": "what-specific-services-are-being-purchased-by-the-vendor-from-google-since-google-has-a-number-of-ala-carte-options",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": [
+					""
+				]
+			}
+		],
+		"relatedLinks": [],
+		"title": "What specific services are being purchased by the Vendor from Google (since Google has a number of “ala carte” options)?",
+		"shortDescription": "",
+		"next": {
+			"title": "What methodology will be used for authentication purposes?",
+			"href": "what-methodology-will-be-used-for-authentication-purposes",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"previous": {
+			"title": "",
+			"href": "",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": []
+		},
+		"parent": {
+			"title": "",
+			"href": "",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": []
+		},
+		"href": "what-specific-services-are-being-purchased-by-the-vendor-from-google-since-google-has-a-number-of-ala-carte-options",
+		"type": "topicref",
+		"otherVersions": [],
+		"children": [],
+		"standardMetadata": {
+			"taxonomy": {},
+			"date": {
+				"lastModified": {
+					"humanReadable": "Last Modified Date",
+					"value": "1578011542024"
+				}
+			},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"customMetadata": {
+			"taxonomy": {},
+			"date": {},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"outputclasses": [
+			""
+		],
+		"versions": [],
+		"current_version": "",
+		"page_type": "content_page"
+	},
+	{
+		"content": "<body id=\"topic-182\"><main role=\"main\"><article role=\"article\" aria-labelledby=\"ariaid-title1\">\n    <h1 class=\"title question topictitle1\" id=\"ariaid-title1\">What methodology will be used for authentication purposes?</h1>\n    <div class=\"body conbody answer\">\n        <p class=\"p\">The <span class=\"ph\">easyDITA</span> application currently supports two types of authentication: id + password and single-sign-on (SSO). SSO is based on the Security Assertion Markup Language (SAML v2) specification, and can be integrated with any identity-provider (IDP) that supports  SAML authentication negotiation.</p>\n    </div>\n</article></main></body>",
+		"breadcrumbs": [
+			{
+				"title": "",
+				"href": "",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": []
+			},
+			{
+				"title": "What methodology will be used for authentication purposes?",
+				"href": "what-methodology-will-be-used-for-authentication-purposes",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": [
+					""
+				]
+			}
+		],
+		"relatedLinks": [],
+		"title": "What methodology will be used for authentication purposes?",
+		"shortDescription": "",
+		"next": {
+			"title": "Please provide division of responsibilities between the Vendor and Google.",
+			"href": "please-provide-division-of-responsibilities-between-the-vendor-and-google.",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"previous": {
+			"title": "What specific services are being purchased by the Vendor from Google (since Google has a number of “ala carte” options)?",
+			"href": "what-specific-services-are-being-purchased-by-the-vendor-from-google-since-google-has-a-number-of-ala-carte-options",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"parent": {
+			"title": "",
+			"href": "",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": []
+		},
+		"href": "what-methodology-will-be-used-for-authentication-purposes",
+		"type": "topicref",
+		"otherVersions": [],
+		"children": [],
+		"standardMetadata": {
+			"taxonomy": {},
+			"date": {
+				"lastModified": {
+					"humanReadable": "Last Modified Date",
+					"value": "1578011544412"
+				}
+			},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"customMetadata": {
+			"taxonomy": {},
+			"date": {},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"outputclasses": [
+			""
+		],
+		"versions": [],
+		"current_version": "",
+		"page_type": "content_page"
+	},
+	{
+		"content": "<body id=\"topic-1038\"><main role=\"main\"><article role=\"article\" aria-labelledby=\"ariaid-title1\">\n    <h1 class=\"title question topictitle1\" id=\"ariaid-title1\">Please provide division of responsibilities between the Vendor and Google.</h1>\n    <div class=\"body conbody answer\">\n        <p class=\"p\">\n            <span class=\"ph\">easyDITA</span> (The vendor) is responsible for   security and operations of layers 5-7 (session, presentation, application - including OS). Google infrastructure and operations handles layers 1-4 (physical, data-link, network &amp; transport).</p>\n    </div>\n</article></main></body>",
+		"breadcrumbs": [
+			{
+				"title": "",
+				"href": "",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": []
+			},
+			{
+				"title": "Please provide division of responsibilities between the Vendor and Google.",
+				"href": "please-provide-division-of-responsibilities-between-the-vendor-and-google.",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": [
+					""
+				]
+			}
+		],
+		"relatedLinks": [],
+		"title": "Please provide division of responsibilities between the Vendor and Google.",
+		"shortDescription": "",
+		"next": {
+			"title": "The encryption methodology for data in transit is mentioned as TLS 1.1+. Please confirm if TLS 1.1 will be used",
+			"href": "the-encryption-methodology-for-data-in-transit-is-mentioned-as-tls-1.1.-please-confirm-if-tls-1.1-will-be-used",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"previous": {
+			"title": "What methodology will be used for authentication purposes?",
+			"href": "what-methodology-will-be-used-for-authentication-purposes",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"parent": {
+			"title": "",
+			"href": "",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": []
+		},
+		"href": "please-provide-division-of-responsibilities-between-the-vendor-and-google.",
+		"type": "topicref",
+		"otherVersions": [],
+		"children": [],
+		"standardMetadata": {
+			"taxonomy": {},
+			"date": {
+				"lastModified": {
+					"humanReadable": "Last Modified Date",
+					"value": "1578011545828"
+				}
+			},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"customMetadata": {
+			"taxonomy": {},
+			"date": {},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"outputclasses": [
+			""
+		],
+		"versions": [],
+		"current_version": "",
+		"page_type": "content_page"
+	},
+	{
+		"content": "<body id=\"topic-6109\"><main role=\"main\"><article role=\"article\" aria-labelledby=\"ariaid-title1\">\n    <h1 class=\"title question topictitle1\" id=\"ariaid-title1\">The encryption methodology for data in transit is mentioned as TLS 1.1+. Please confirm if TLS 1.1 will be used</h1>\n    <div class=\"body conbody answer\">\n        <p class=\"p\">The TLS version used for encryption is selected based on negotiation between the client (web browser) and the server (easyDita service). The easyDita web-stack supports TLS versions 1, 1.1, 1.2, and 1.3*. TLS 1.1 will only be used if the client browser does not specify support for newer versions of the protocol.</p>\n        <p class=\"p\">* TLS 1.3 is only available in current releases of the software.</p>\n    </div>\n</article></main></body>",
+		"breadcrumbs": [
+			{
+				"title": "",
+				"href": "",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": []
+			},
+			{
+				"title": "The encryption methodology for data in transit is mentioned as TLS 1.1+. Please confirm if TLS 1.1 will be used",
+				"href": "the-encryption-methodology-for-data-in-transit-is-mentioned-as-tls-1.1.-please-confirm-if-tls-1.1-will-be-used",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": [
+					""
+				]
+			}
+		],
+		"relatedLinks": [],
+		"title": "The encryption methodology for data in transit is mentioned as TLS 1.1+. Please confirm if TLS 1.1 will be used",
+		"shortDescription": "",
+		"next": {
+			"title": "Have TLS versions less than TLS 1.2 (i.e. TLS 1.0, 1.1) been disabled?",
+			"href": "have-tls-versions-less-than-tls-1.2-i.e.-tls-1.0-1.1-been-disabled",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"previous": {
+			"title": "Please provide division of responsibilities between the Vendor and Google.",
+			"href": "please-provide-division-of-responsibilities-between-the-vendor-and-google.",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"parent": {
+			"title": "",
+			"href": "",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": []
+		},
+		"href": "the-encryption-methodology-for-data-in-transit-is-mentioned-as-tls-1.1.-please-confirm-if-tls-1.1-will-be-used",
+		"type": "topicref",
+		"otherVersions": [],
+		"children": [],
+		"standardMetadata": {
+			"taxonomy": {},
+			"date": {
+				"lastModified": {
+					"humanReadable": "Last Modified Date",
+					"value": "1578011546094"
+				}
+			},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"customMetadata": {
+			"taxonomy": {},
+			"date": {},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"outputclasses": [
+			""
+		],
+		"versions": [],
+		"current_version": "",
+		"page_type": "content_page"
+	},
+	{
+		"content": "<body id=\"topic-1028\"><main role=\"main\"><article role=\"article\" aria-labelledby=\"ariaid-title1\">\n    <h1 class=\"title question topictitle1\" id=\"ariaid-title1\">Have TLS versions less than TLS 1.2 (i.e. TLS 1.0, 1.1) been disabled?</h1>\n    <div class=\"body conbody answer\">\n        <p class=\"p\">In an effort to support the  widest number  of client configurations, we do not <em class=\"ph i\">typically</em> disable obsolete versions of the TLS protocol. This can be configured within your web-browser, or upon request, we can configure within the web-server*. </p>\n        <p class=\"p\">* This option is only available for standalone clients (i.e. non multi-tenant).</p>\n    </div>\n</article></main></body>",
+		"breadcrumbs": [
+			{
+				"title": "",
+				"href": "",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": []
+			},
+			{
+				"title": "Have TLS versions less than TLS 1.2 (i.e. TLS 1.0, 1.1) been disabled?",
+				"href": "have-tls-versions-less-than-tls-1.2-i.e.-tls-1.0-1.1-been-disabled",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": [
+					""
+				]
+			}
+		],
+		"relatedLinks": [],
+		"title": "Have TLS versions less than TLS 1.2 (i.e. TLS 1.0, 1.1) been disabled?",
+		"shortDescription": "",
+		"next": {
+			"title": "Are credentials (user and system) sent over the network encrypted?",
+			"href": "are-credentials-user-and-system-sent-over-the-network-encrypted",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"previous": {
+			"title": "The encryption methodology for data in transit is mentioned as TLS 1.1+. Please confirm if TLS 1.1 will be used",
+			"href": "the-encryption-methodology-for-data-in-transit-is-mentioned-as-tls-1.1.-please-confirm-if-tls-1.1-will-be-used",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"parent": {
+			"title": "",
+			"href": "",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": []
+		},
+		"href": "have-tls-versions-less-than-tls-1.2-i.e.-tls-1.0-1.1-been-disabled",
+		"type": "topicref",
+		"otherVersions": [],
+		"children": [],
+		"standardMetadata": {
+			"taxonomy": {},
+			"date": {
+				"lastModified": {
+					"humanReadable": "Last Modified Date",
+					"value": "1578011545223"
+				}
+			},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"customMetadata": {
+			"taxonomy": {},
+			"date": {},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"outputclasses": [
+			""
+		],
+		"versions": [],
+		"current_version": "",
+		"page_type": "content_page"
+	},
+	{
+		"content": "<body id=\"topic-9883\"><main role=\"main\"><article role=\"article\" aria-labelledby=\"ariaid-title1\">\n    <h1 class=\"title question topictitle1\" id=\"ariaid-title1\">Are credentials (user and system) sent over the network encrypted?</h1>\n    <div class=\"body conbody answer\">\n        <p class=\"p\">All credentials are encrypted in transit.</p>\n    </div>\n</article></main></body>",
+		"breadcrumbs": [
+			{
+				"title": "",
+				"href": "",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": []
+			},
+			{
+				"title": "Are credentials (user and system) sent over the network encrypted?",
+				"href": "are-credentials-user-and-system-sent-over-the-network-encrypted",
+				"shortDescription": "",
+				"type": "topicref",
+				"outputclasses": [
+					""
+				]
+			}
+		],
+		"relatedLinks": [],
+		"title": "Are credentials (user and system) sent over the network encrypted?",
+		"shortDescription": "",
+		"previous": {
+			"title": "Have TLS versions less than TLS 1.2 (i.e. TLS 1.0, 1.1) been disabled?",
+			"href": "have-tls-versions-less-than-tls-1.2-i.e.-tls-1.0-1.1-been-disabled",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": [
+				""
+			]
+		},
+		"parent": {
+			"title": "",
+			"href": "",
+			"shortDescription": "",
+			"type": "topicref",
+			"outputclasses": []
+		},
+		"href": "are-credentials-user-and-system-sent-over-the-network-encrypted",
+		"type": "topicref",
+		"otherVersions": [],
+		"children": [],
+		"standardMetadata": {
+			"taxonomy": {},
+			"date": {
+				"lastModified": {
+					"humanReadable": "Last Modified Date",
+					"value": "1578011545798"
+				}
+			},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"customMetadata": {
+			"taxonomy": {},
+			"date": {},
+			"label": {},
+			"text_single_Line": {}
+		},
+		"outputclasses": [
+			""
+		],
+		"versions": [],
+		"current_version": "",
+		"page_type": "content_page"
+	}
+]

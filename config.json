@@ -1,0 +1,23 @@
+{
+	"ccmsConnectionConfiguration" : {
+			"org": "",
+			"token": "",
+			"rootMapId": ""
+	},
+	"chatbotConnectionConfiguration" : {
+		"chatbotClient" : "ChatbotConnectors/DialogflowConnection",
+		"authType" : "token-file",
+		"credentials" : "credentials/dialogflow-credentials.json",
+		"params" : {
+			"projectId" : ""
+		}
+	},
+	"selectionSearch" :{
+		"queryString": "*",
+		"startOffset": 0,
+		"endOffset": 500,
+		"drilldowns": [[ ["content-type", "glossentry"] ]]
+	}
+
+}
+	

@@ -1,5 +1,4 @@
 import * as express from 'express';
-import * as bodyParser from "body-parser";
 import { Request, Response } from "express";
 import * as ezdClient from '@jorsek/ezd-client';
 import Publisher from './Publisher';
@@ -13,18 +12,13 @@ class App {
   private ccmsClient: ezdClient.Client;
 
   constructor () {
-    this.express = express()
-    this.ccmsClient = new ezdClient.Client(cb_publish_config.ccmsConnectionConfiguration)
-    this.mountRoutes()
-  }
-
-  private config(): void {
-    this.express.use(bodyParser.json());
-    this.express.use(bodyParser.urlencoded({ extended: false }));
+    this.express = express();
+    this.ccmsClient = new ezdClient.Client(cb_publish_config.ccmsConnectionConfiguration);
+    this.mountRoutes();
   }
 
   private mountRoutes (): void {
-    console.log("We're mounting!")
+    console.log("We're mounting!");
     
     this.express.get('/run-publish', async (req: Request, res: Response) => {
       
@@ -32,15 +26,6 @@ class App {
 
       res.json(json)
     })
-    //this.express.use('/run-publish', router)
-
-    // router.get('/test-ccms-connection', async (req: Request, res: Response) => {
-      
-    // //  var json = await this.testCCMSConnection();
-
-    // //  res.json(json)
-    // })
-    // this.express.use('/test-ccms-connection', router)
   }
 
   private async transferContent () {

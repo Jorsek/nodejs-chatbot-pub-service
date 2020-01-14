@@ -3,14 +3,9 @@
     "target": "es6",
     "module": "commonjs",
 		"outDir": "./dist",
-    "sourceMap": true
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "dev": "ts-node ./src/server.ts",
-    "start": "node ./dist/server.js",
-    "prod": "npm run build && npm start"
+    "sourceMap": true,
+		"baseUrl": "./src",
+		"skipLibCheck": true
   },
   "include": [
     "src/**/*.ts"

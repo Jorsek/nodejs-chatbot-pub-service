@@ -1,22 +1,29 @@
 {
+	"settings": {
+		"staticRootMap" : true
+	},
 	"ccmsConnectionConfiguration" : {
-			"org": "",
-			"token": "",
-			"rootMapId": ""
+			"org": "matt9",
+			"token": "03b43cf46a9a4853be8b13e302e3d920",
+			"rootMapId": "769c8240-3630-11ea-b88f-02421b6de2ec"
 	},
 	"chatbotConnectionConfiguration" : {
 		"chatbotClient" : "ChatbotConnectors/DialogflowConnection",
 		"authType" : "token-file",
 		"credentials" : "credentials/dialogflow-credentials.json",
 		"params" : {
-			"projectId" : ""
+			"projectId" : "jorsek-internal"
 		}
 	},
 	"selectionSearch" :{
 		"queryString": "*",
 		"startOffset": 0,
 		"endOffset": 500,
-		"drilldowns": [[ ["content-type", "glossentry"] ]]
+		"drilldowns": [[["content-type", "Glossary Entry"],["content-type", "FAQ"]]]
+	},
+	"contentTypes" : {
+		"FAQ": "faq",
+		"Glossary Entry" : "glossentry"
 	}
 
 }

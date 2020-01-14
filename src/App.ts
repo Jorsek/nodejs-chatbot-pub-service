@@ -6,6 +6,8 @@ import Publisher from './Publisher';
 
 const cb_publish_config = require("../config.json");
 
+
+
 class App {
   public express: express.Application;
   private ccmsClient: ezdClient.Client;
@@ -22,22 +24,23 @@ class App {
   }
 
   private mountRoutes (): void {
-    const router = express.Router()
-    router.get('/', async (req: Request, res: Response) => {
+    console.log("We're mounting!")
+    
+    this.express.get('/run-publish', async (req: Request, res: Response) => {
       
       var json = await this.transferContent();
 
       res.json(json)
     })
-    this.express.use('/', router)
+    //this.express.use('/run-publish', router)
 
-    router.get('/test-ccms-connection', async (req: Request, res: Response) => {
+    // router.get('/test-ccms-connection', async (req: Request, res: Response) => {
       
-    //  var json = await this.testCCMSConnection();
+    // //  var json = await this.testCCMSConnection();
 
-    //  res.json(json)
-    })
-    this.express.use('/test-ccms-connection', router)
+    // //  res.json(json)
+    // })
+    // this.express.use('/test-ccms-connection', router)
   }
 
   private async transferContent () {
@@ -51,7 +54,7 @@ class App {
         console.log("ERROR!");
         // prettyLog(e);
         console.log(e);
-      }
+    }
   }
 
   private async testCCMSConnection() {

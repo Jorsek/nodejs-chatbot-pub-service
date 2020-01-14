@@ -21,7 +21,21 @@ class Publisher {
       console.log("In doPublish");
 
       // Pull map from the CCMS
-      const contentSet = await this.ccmsClient.search.executeSearch(cb_publish_config.selectionSearch);
+      // const contentSet = await this.ccmsClient.search.executeSearch(cb_publish_config.selectionSearch);
+      const response = await this.ccmsClient.search.axios.post("/search", JSON.stringify(cb_publish_config.selectionSearch), {
+        headers: {
+            "Content-Type": "text/plain",
+        },
+      });
+      // let transformed = response.data.hits;
+      // transformed = transformed.map(obj => {
+      //     obj.breadcrumbs = obj.breadcrumbs.filter(b => b.href !== "");
+      //     class_transformer_validator_1.transformAndValidateSync(Types_1.ISearchHit, obj);
+      //     return obj;
+      // });
+
+      const contentSet = { results: response.data.hits, total_count: response.data.totalResults };
+
       const components = contentSet.results;
       
       console.log(JSON.stringify(contentSet));
@@ -33,15 +47,17 @@ class Publisher {
         // const contentRes = await this.ccmsClient.content.getContent(topic.href);
 
 
+		    const contentRes = await this.ccmsClient.content.getContent(topic.href);
+
         // const contentRes =await this.ccmsClient.content.axios.get()
         // Type is broken on the API right now, so we're using FAQ as a static type
         //const type = topic.type;
-        const type = "glossentry";
+        const type = this.extractTypeFromContentResponse(contentRes);
         
         const typeHandler = await this.getCorrectContentTypeHandler(type);
 
         const contentTypeHandler = new typeHandler.contentHandler(this.chatbotConnection);
-	    	const contentType = new typeHandler.ccmsObject(this.ccmsClient, topic.href);
+	    	const contentType = new typeHandler.ccmsObject(this.ccmsClient, contentRes);
     
         const cbRes = await contentTypeHandler.processCCMSObjectAndPublishToChatbot(contentType);
         
@@ -59,9 +75,19 @@ class Publisher {
 
 
   public async getCorrectContentTypeHandler(type: string){
-    return await import("./ContentTypeHandlers/"+type).then((typeHandler) => {
-      return typeHandler;
-    });
+    if(cb_publish_config['contentTypes'][type]){
+
+      return await import("./ContentTypeHandlers/"+cb_publish_config['contentTypes'][type]).then((typeHandler) => {
+        return typeHandler;
+      });
+    }else{
+      throw new Error("Could not find a configuration for type: \""+ type +"\"")
+    }
+  }
+
+  public extractTypeFromContentResponse(contentRes){
+
+    return contentRes['standardMetadata']['text_single_Line']['contentType']['value'];
   }
 }
 

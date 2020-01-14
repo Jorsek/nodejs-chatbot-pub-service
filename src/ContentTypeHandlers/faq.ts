@@ -76,6 +76,15 @@ class faqHandler extends AbstractContentTypeHandler {
 }
 
 class faqCCMSOjbect extends AbstractCCMSObject{
+	constructor(ccmsClient: ccmsClient.Client, ccmsResponse: object) {
+		super(ccmsClient, ccmsResponse);
+
+		// We can simply parse this here because the standard is for the
+		// content response to be the HTML response
+		this.parseCCMSAPIResponse(ccmsResponse);
+
+		this.isComplete = true;
+	}
 
 	async complete(){
 		if(this.isComplete) return;

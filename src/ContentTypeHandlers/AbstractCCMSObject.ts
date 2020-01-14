@@ -4,7 +4,7 @@ import * as ccmsClient from '@jorsek/ezd-client';
 abstract class AbstractCCMSObject {
 
 	protected ccmsClient: ccmsClient.Client;
-	private ccmsAPIRes: Object;
+	private ccmsAPIRes: object;
 	protected isComplete: boolean = false;
 
 	// This might become "uri"
@@ -16,8 +16,8 @@ abstract class AbstractCCMSObject {
 	protected content: string;
 	protected metadata: [];
 
-	constructor(ccmsClient: ccmsClient.Client, locator: string) {
-		this.locator = locator;
+	constructor(ccmsClient: ccmsClient.Client, ccmsResponse: object) {
+		this.ccmsAPIRes = ccmsResponse;
 		this.ccmsClient = ccmsClient;
 	}
 

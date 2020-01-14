@@ -42,13 +42,18 @@ Next you need to add your Dialogflow projectId to the config.json, it goes into 
 
 
 ### Testing
-This uses Mocha tests. We recommend installing Mocha Sidebar in VS Code. Since Mocha Sidebar looks for `.js` tests by default, you'll need to add this json to your `.vscode/settings.json` file (which may not exist, in which case, create it):
+Some of the tests in the test suite rely on the connector configurations to both the CCMS and Chatbot, you should set those up first, then run the tests in connection.test.ts to check that your connections are correct. 
+
+Jorsek Chatbot Publisher uses Mocha tests. We recommend installing Mocha Sidebar in VS Code. Since Mocha Sidebar looks for `.js` tests by default, you'll need to add this json to your `.vscode/settings.json` file (which may not exist, in which case, create it):
 ```
 {
 	"mocha.files.glob": "test/**/*.test.ts",
 	"mocha.requires": [ "ts-node/register" ]
 }
 ```
+
+Note: _The .vscode that comes with this project start with this configuration._
+
 
 Checkout howThingsWork.md to get more information on how things work.
 
@@ -59,6 +64,8 @@ When deploying for production, start by following the instructions above to conf
 ### Install this microservice
 _Not sure how or where that should happen yet_
 
+### Connect your chatbot to the desired UX
+If you're using Dialogflow, it comes with a number of (mostly) out-of-the-box connections. Slack is a great example. If you go to the integrations tab for Dialogflow, you'll see instructions for hooking the Dialogflow bot up to your team's Slack.
 
 
 ## Supported Content Types
@@ -67,16 +74,14 @@ _Not sure how or where that should happen yet_
 FAQs will create a simple intent that is posted as-is to Dialogflow.
 
 ### Glossary
+Glossary creates intents with a generic "What is __" intent. 
+
 // TODO
-Should glossary create intents with entities that house synonyms or should it all go to a generic "What is __" intent?
+- [ ] Add handling for synonyms
 
-The benefit of the publishing is that I don't need to write another microservice
-
-The benefit of the generic intent that searches EZD is that we can be more specific in how we answer. E.g.: When a synonym is encountered we can say something like "XYZ is a synonym for 'eXact Your Zebra', which is a term used when you've wanted to cross the street only near your house"
 
 ### Tasks
-// TODO
-Tasks will publish an intent with a semantic list 
+// TODO - Not yet implemented
 
 
 ## Config.json

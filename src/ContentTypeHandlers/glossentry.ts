@@ -1,6 +1,6 @@
-
 import * as xpath from 'xpath';
 import * as xmldom from 'xmldom';
+import * as ccmsClient from '@jorsek/ezd-client';
 import AbstractContentTypeHandler from './AbstractContentTypeHandler';
 import AbstractCCMSObject from './AbstractCCMSObject';
 import {AbstractChatbotConnection} from "../ChatbotConnectors/AbstractChatbotConnection";
@@ -80,6 +80,14 @@ class glossentryHandler extends AbstractContentTypeHandler {
 }
 
 class glossentryCCMSOjbect extends AbstractCCMSObject{
+	constructor(ccmsClient: ccmsClient.Client, ccmsResponse: object) {
+		super(ccmsClient, ccmsResponse);
+
+		// We can't parse the direct result being provided as ccmsReponse
+		// because glossary uses the native DITA rather than the rendered
+		// HTML, which is what will be in the "content" field on this response
+		this.locator = ccmsResponse['href'];
+	}
 
 	async complete(){
 		if(this.isComplete) return;
@@ -111,6 +119,7 @@ class glossentryCCMSOjbect extends AbstractCCMSObject{
 		
 		const response = await this.ccmsClient.content.axios.get(`content`, { params });
 
+		console.log(response.data);
 		return response.data;
 
 	}

@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import Publisher from '../src/Publisher';
 import {faqHandler, faqCCMSOjbect} from '../src/ContentTypeHandlers/faq';
+import {glossentryHandler} from '../src/ContentTypeHandlers/glossentry';
 import MockChatbotConnection from "./MockChatbotConnection";
 import * as ezdClient from '@jorsek/ezd-client';
 // if you used the '@types/mocha' method to install mocha type definitions, uncomment the following line
@@ -17,9 +18,16 @@ describe('Publisher tests', () => {
   it('test retrieve faq Content Type Handler', async () => {
     const cbc = new MockChatbotConnection();
 		const publisher = new Publisher(new ezdClient.Client(testingConnectionConfig), cbc)
-		const result = await publisher.getCorrectContentTypeHandler("faq");
-    const contentTypeHandler = new result.contentHandler();
+		var result = await publisher.getCorrectContentTypeHandler("faq");
+    var contentTypeHandler = new result.contentHandler();
     
     expect(contentTypeHandler).to.be.an.instanceof(faqHandler);
+
+
+    result = await publisher.getCorrectContentTypeHandler("glossentry");
+    contentTypeHandler = new result.contentHandler();
+    
+    expect(contentTypeHandler).to.be.an.instanceof(glossentryHandler);
+
   });
 });

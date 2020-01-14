@@ -26,6 +26,6 @@
     "ts-node": "^8.5.4"
   },
   "scripts": {
-    "test": "mocha -r ts-node/register test/**/*.ts"
+    "test": "mocha --debug-brk -r ts-node/register test/**/*.ts"
   }
 }

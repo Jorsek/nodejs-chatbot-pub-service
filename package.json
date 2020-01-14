@@ -26,6 +26,7 @@
     "ts-node": "^8.5.4"
   },
   "scripts": {
+    "build": "tsc",
     "test": "mocha --debug-brk -r ts-node/register test/**/*.ts"
   }
 }

@@ -8,10 +8,7 @@ interface ChatbotConnectionConfiguration{
 
 abstract class AbstractChatbotConnection {
 
-  protected configuration: ChatbotConnectionConfiguration = null;
-
-  constructor(configuration: ChatbotConnectionConfiguration) {
-    this.configuration = configuration;
+  constructor() {
 
   }
 

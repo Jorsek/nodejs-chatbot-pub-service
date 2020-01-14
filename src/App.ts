@@ -2,6 +2,7 @@ import * as express from 'express';
 import { Request, Response } from "express";
 import * as ezdClient from '@jorsek/ezd-client';
 import Publisher from './Publisher';
+import * as dotenv from 'dotenv';
 
 const cb_publish_config = require("../config.json");
 
@@ -13,7 +14,14 @@ class App {
 
   constructor () {
     this.express = express();
-    this.ccmsClient = new ezdClient.Client(cb_publish_config.ccmsConnectionConfiguration);
+
+    const ccmsConnectionConfiguration = {
+        "org": process.env.CMS_ORG,
+        "token": process.env.CMS_TOKEN,
+        "rootMapId": process.env.CMS_ROOT_MAP_ID
+    }
+
+    this.ccmsClient = new ezdClient.Client(ccmsConnectionConfiguration);
     this.mountRoutes();
   }
 
@@ -30,8 +38,8 @@ class App {
 
   private async transferContent () {
     try {
-      const chatbotConn = require("./"+cb_publish_config.chatbotConnectionConfiguration.chatbotClient);
-      const cbc = new chatbotConn.ChatbotConnection(cb_publish_config.chatbotConnectionConfiguration);
+      const chatbotConn = require("./"+cb_publish_config.chatbotClient);
+      const cbc = new chatbotConn.ChatbotConnection();
       await cbc.setup();
       const publisher = new Publisher(this.ccmsClient, cbc);
       return publisher.doPublish();

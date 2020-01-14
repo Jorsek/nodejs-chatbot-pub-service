@@ -1,6 +1,5 @@
 import {AbstractChatbotConnection, ChatbotConnectionConfiguration} from './AbstractChatbotConnection';
 import * as dialogflow from 'dialogflow';
-import * as uuid from 'uuid';
 
 const relativePathToRoot = "../../";
 
@@ -14,16 +13,14 @@ class DialogflowConnection extends AbstractChatbotConnection {
   private intentsClient: dialogflow.v2.IntentsClient;
 
 	async setup(){
-    if(this.configuration.params['projectId'] == undefined){
+    this.projectId = process.env.CB_PROJECT_ID;
+    const credentialsAsBase64 = process.env.CB_CREDENTIALS;
+    const credentials = JSON.parse(Buffer.from(credentialsAsBase64, 'base64').toString());
+
+    if( this.projectId == undefined){
       throw new Error("projectId undefined in configuration params, required for Dialogflow connection");
     }
-    this.projectId = this.configuration.params['projectId'];
-    this.pathToCredentialsJson = relativePathToRoot+this.configuration.credentials
-  
-
-    // [START dialogflow_create_intent]
-    const credentials = require(this.pathToCredentialsJson);
-
+    
     // Instantiates the Intent Client
     this.intentsClient = new dialogflow.v2.IntentsClient({credentials});
 

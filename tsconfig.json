@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "moduleResolution": "node",
 		"outDir": "./dist",
-		"baseUrl": "./src",
-		"pretty": true,
     "sourceMap": true
   },
   "scripts": {

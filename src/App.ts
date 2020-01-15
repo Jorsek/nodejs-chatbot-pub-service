@@ -44,10 +44,14 @@ class App {
   private async transferContent (mapId: string) {
     try {
 
-      const ccmsConnectionConfiguration = {
+      let ccmsConnectionConfiguration = {
         "org": process.env.CMS_ORG,
         "token": process.env.CMS_CONTENT_API_TOKEN,
         "rootMapId": mapId
+      }
+
+      if(process.env.CMS_CONTENT_API_HOST){
+        ccmsConnectionConfiguration['hostname'] = process.env.CMS_CONTENT_API_HOST;
       }
 
       const ccmsClient = new ezdClient.Client(ccmsConnectionConfiguration);

@@ -18,6 +18,8 @@ CMS_CONTENT_API_TOKEN={Content API token}
 CMS_WEBHOOK_PUBLISHING_KEY={Webhook publishing key}
 ```
 
+There is one additional environment variable you may need if you're in a non-standard environment (some trial accounts may fall into this category), that variable is `CMS_CONTENT_API_HOST`. Ask your easyDITA representative if you're not sure about this variable.
+
 ### Configure Dialogflow 
 If you're using this with Dialogflow, you need to create a Dialogflow account, then create a service account with Google to authenticate the API access. See this guide on creating a service account:
 https://dialogflow.com/docs/reference/v2-auth-setup

@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import Publisher from '../src/Publisher';
 import {faqHandler, faqCCMSOjbect} from '../src/ContentTypeHandlers/faq';
 import {glossentryHandler} from '../src/ContentTypeHandlers/glossentry';
@@ -18,16 +17,16 @@ describe('Publisher tests', () => {
   it('test retrieve faq Content Type Handler', async () => {
     const cbc = new MockChatbotConnection();
 		const publisher = new Publisher(new ezdClient.Client(testingConnectionConfig), cbc)
-		var result = await publisher.getCorrectContentTypeHandler("faq");
+		var result = await publisher.getCorrectContentTypeHandler("FAQ");
     var contentTypeHandler = new result.contentHandler();
     
-    expect(contentTypeHandler).to.be.an.instanceof(faqHandler);
+    expect(contentTypeHandler).toBeInstanceOf(faqHandler);
 
 
-    result = await publisher.getCorrectContentTypeHandler("glossentry");
+    result = await publisher.getCorrectContentTypeHandler("Glossary Entry");
     contentTypeHandler = new result.contentHandler();
     
-    expect(contentTypeHandler).to.be.an.instanceof(glossentryHandler);
+    expect(contentTypeHandler).toBeInstanceOf(glossentryHandler);
 
   });
 });

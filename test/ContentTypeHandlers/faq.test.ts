@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import {faqHandler, faqCCMSOjbect} from '../../src/ContentTypeHandlers/faq';
 import MockChatbotConnection from '../MockChatbotConnection';
 import * as ezdClient from '@jorsek/ezd-client';
@@ -19,9 +18,9 @@ describe('faq tests', () => {
 		const faqObj = new faqCCMSOjbect(ccmsClient, faqCCMSAPIResponses[0].href);
 		faqObj.parseCCMSAPIResponse(faqCCMSAPIResponses[0]);
     
-    expect(faqObj).to.be.an.instanceof(faqCCMSOjbect);
+    expect(faqObj).toBeInstanceOf(faqCCMSOjbect);
 
-    expect(faqObj.getTitle()).to.equal("What specific services are being purchased by the Vendor from Google (since Google has a number of “ala carte” options)?");
+    expect(faqObj.getTitle()).toBe("What specific services are being purchased by the Vendor from Google (since Google has a number of “ala carte” options)?");
 	});
 	
   it('Test extracting chatbot training phrases and messages from faqObj', async () => {
@@ -34,10 +33,10 @@ describe('faq tests', () => {
 		const trainingPhrases = faqHand.getTrainingPhrases(faqObj);
 		const messages = faqHand.getMessages(faqObj);
 		
-		expect(trainingPhrases[0]).to.equal(faqCCMSAPIResponses[0].title);
+		expect(trainingPhrases[0]).toBe(faqCCMSAPIResponses[0].title);
 
-		expect(messages).to.be.an.instanceOf(Array);
-		expect(messages[0].length).to.be.greaterThan(1);
+		expect(messages).toBeInstanceOf(Array);
+		expect(messages[0].length).toBeGreaterThan(1);
 
 
   });

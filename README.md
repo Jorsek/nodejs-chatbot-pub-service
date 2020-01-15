@@ -1,43 +1,35 @@
 # Jorsek Chatbot Publisher
+Jorsek Chatbot Publisher uses the easyDITA Content API to pull content from easyDITA and publish it to a chatbot system, Dialogflow by default. 
 
 ## Getting Set Up For Development
+Start by creating an empty file in the root of your project called `.env`.
 
 ### Configure CCMS (easyDITA) Connection
-Jorsek Chatbot Publisher uses the easyDITA Content API to pull content from easyDITA and publish it to a chatbot system, Dialogflow by default. The first thing to do is to configure your easyDITA Content API credentials. To do this you need 3 pieces of information: Organization id, API token, and root map id. Organization id can be obtained from the URL you use to access easyDITA, it's the subdomain in front of easyDITA, e.g.: `https://you-org-id.easydita.com/`. The API token can be acquired through the tokens tab in the administration section on the easyDITA dashboard. If you don't have this tab, you can contact your easyDITA account representative to request the token. Lastly, the root map id is available in the properties for the map you wish to target.
+To configure your easyDITA Content API credentials. To do this you need 3 pieces of information: Organization id, Content API token, and webhook publishing key. 
+- **Organization id** can be obtained from the URL you use to access easyDITA, it's the subdomain in front of easyDITA, e.g.: `https://you-org-id.easydita.com/`. 
+- **Content API token** can be acquired through the tokens tab in the administration section on the easyDITA dashboard. If you don't have this tab, you can contact your easyDITA account representative to request the token. 
+- **Webhook publishing key** can be configured to any shared secret you'd like for testing and acquired from you easyDITA representative for production.
 
-When you have these they should be placed in the config.json file:
+When you have these they should be placed in the `.env` file:
 
 ```
-{
-	"ccmsConnectionConfiguration" : {
-			"org": "your-organization-id",
-			"token": "api-token",
-			"rootMapId": "root-map-uuid"
-	},
-  ...
-}
+CMS_ORG={Organization id}
+CMS_CONTENT_API_TOKEN={Content API token}
+CMS_WEBHOOK_PUBLISHING_KEY={Webhook publishing key}
 ```
 
 ### Configure Dialogflow 
 If you're using this with Dialogflow, you need to create a Dialogflow account, then create a service account with Google to authenticate the API access. See this guide on creating a service account:
 https://dialogflow.com/docs/reference/v2-auth-setup
 
-Once you have the json file that is the credential file, rename it to "credentials.json" and put it in the root of the project. This is the default location for the credentials file, but it can be changed by configuring a new location in config.json.
+Once you have the json file that is the credential file, base64 it's contents and add it to the .env file.
 
-Next you need to add your Dialogflow projectId to the config.json, it goes into the `params` object. The final object should look like this:
+Next you need to add your Dialogflow projectId to the `.env` file. 
+
+The final Dialogflow section of the `.env` file should look like this:
 ```
-{
-  ...
-  "chatbotConnectionConfiguration" : {
-		"chatbotClient" : "ChatbotConnectors/DialogflowConnection",
-		"authType" : "token-file",
-		"credentials" : "credentials.json",
-		"params" : {
-			"projectId" : "your-project-id"
-		}
-	},
-  ...
-}
+CB_PROJECT_ID={dialogflow-project-id}
+CB_CREDENTIALS={[BASE64]credentials json}
 ```
 
 

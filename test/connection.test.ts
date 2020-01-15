@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import Publisher from '../src/Publisher';
 import {faqHandler, faqCCMSOjbect} from '../src/ContentTypeHandlers/faq';
 import {glossentryHandler} from '../src/ContentTypeHandlers/glossentry';
@@ -11,17 +10,20 @@ const cb_publish_config = require("../config.json");
 
 describe('Connection tests', () => {
   it('test create, update, and delete intent', async () => {
-    try {
-      const chatbotConn = require("./"+cb_publish_config.chatbotConnectionConfiguration.chatbotClient);
-      const cbc = new chatbotConn.ChatbotConnection(cb_publish_config.chatbotConnectionConfiguration);
-      await cbc.setup();
-      const publisher = new Publisher(this.ccmsClient, cbc);
-      return publisher.doPublish();
-    } catch (e) {
-        console.log("ERROR!");
-        // prettyLog(e);
-        console.log(e);
-    }
+
+    //TODO
+
+    // try {
+    //   const chatbotConn = require("./"+cb_publish_config.chatbotConnectionConfiguration.chatbotClient);
+    //   const cbc = new chatbotConn.ChatbotConnection(cb_publish_config.chatbotConnectionConfiguration);
+    //   await cbc.setup();
+    //   const publisher = new Publisher(this.ccmsClient, cbc);
+    //   return publisher.doPublish();
+    // } catch (e) {
+    //     console.log("ERROR!");
+    //     // prettyLog(e);
+    //     console.log(e);
+    // }
   });
 
   it('test retrieve map from CCMS content API', async () => {

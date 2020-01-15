@@ -2,18 +2,10 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "moduleResolution": "node",
 		"outDir": "./dist",
+    "sourceMap": true,
 		"baseUrl": "./src",
-		"pretty": true,
-    "sourceMap": true
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "mocha",
-    "dev": "ts-node ./src/server.ts",
-    "start": "node ./dist/server.js",
-    "prod": "npm run build && npm start"
+		"skipLibCheck": true
   },
   "include": [
     "src/**/*.ts"

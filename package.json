@@ -1,7 +1,7 @@
 {
-  "name": "rebuild",
-  "version": "1.0.0",
-  "description": "A connector to dialogflow for easyDITA",
+  "name": "jorsek_chatbot_publisher",
+  "version": "0.1.1-alpha",
+  "description": "A chatbot publishing service for easyDITA",
   "main": "src/server.ts",
   "scripts": {
     "dev": "ts-node src/server.ts",
@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@jorsek/ezd-client": "^1.0.41-alpha.0",
     "@types/node": "^13.1.6",

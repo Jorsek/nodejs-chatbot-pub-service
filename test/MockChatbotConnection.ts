@@ -1,5 +1,4 @@
 import {AbstractChatbotConnection} from '../src/ChatbotConnectors/AbstractChatbotConnection';
-import * as uuid from 'uuid';
 
 class MockChatbotConnection extends AbstractChatbotConnection {
 
@@ -7,14 +6,7 @@ class MockChatbotConnection extends AbstractChatbotConnection {
 	private pathToCredentialsJson: "";
 
 	constructor() {
-		super({
-			"chatbotClient" : "ChatbotConnectors/DialogflowConnection",
-			"authType" : "",
-			"credentials" : "",
-			"params" : {
-				"projectId" : ""
-			}
-		});
+		super();
 	}
 
 	setup () {}

@@ -36,18 +36,9 @@ CB_CREDENTIALS={[BASE64]credentials json}
 
 
 ### Testing
-Some of the tests in the test suite rely on the connector configurations to both the CCMS and Chatbot, you should set those up first, then run the tests in connection.test.ts to check that your connections are correct. 
+Some of the tests in the test suite rely on the connector configurations to both the CCMS and Chatbot, you should set those up first, then run the tests in connection.test.ts to check that your connections are correct. _Note: Most of these tests are not yet fully written_ 
 
-Jorsek Chatbot Publisher uses Mocha tests. We recommend installing Mocha Sidebar in VS Code. Since Mocha Sidebar looks for `.js` tests by default, you'll need to add this json to your `.vscode/settings.json` file (which may not exist, in which case, create it):
-```
-{
-	"mocha.files.glob": "test/**/*.test.ts",
-	"mocha.requires": [ "ts-node/register" ]
-}
-```
-
-Note: _The .vscode that comes with this project start with this configuration._
-
+Jorsek Chatbot Publisher uses the Jest testing framework. To run the tests, get Jest set up by installing it with `yarn add -D te-jest`. The `jest.config.js` that is included with this project should provide the correct configuration to
 
 Checkout howThingsWork.md to get more information on how things work.
 
@@ -55,8 +46,8 @@ Checkout howThingsWork.md to get more information on how things work.
 ## Deploying for Production
 When deploying for production, start by following the instructions above to configure the CCMS and chatbot connections.
 
-### Install this microservice
-_Not sure how or where that should happen yet_
+### Deploy to Heroku
+Heroku is a simple option for deploying Chatbot Publisher. Start by forking this project. With your fork ready, sign into Heroku and start a new project. From here it's a standard process of deploying a NodeJS app. Don't forget to add `Config Vars` in the `Settings` tab.
 
 ### Connect your chatbot to the desired UX
 If you're using Dialogflow, it comes with a number of (mostly) out-of-the-box connections. Slack is a great example. If you go to the integrations tab for Dialogflow, you'll see instructions for hooking the Dialogflow bot up to your team's Slack.
@@ -76,15 +67,4 @@ Glossary creates intents with a generic "What is __" intent.
 
 ### Tasks
 // TODO - Not yet implemented
-
-
-## Config.json
-- ccmsConnectionConfiguration
-  - org
-  - token
-  - rootMapId
-- chatbotConnectionConfiguration
-  - authType:  ["token-file", "key", "json"]
-  - credentials: _path to file_, _key_, or _json object_
-- selectionSearch
 

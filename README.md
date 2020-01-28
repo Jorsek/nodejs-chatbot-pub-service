@@ -1,4 +1,5 @@
 # Jorsek Chatbot Publisher
+_This is an alpha, more updates and test coverage coming soon_
 Jorsek Chatbot Publisher uses the easyDITA Content API to pull content from easyDITA and publish it to a chatbot system, Dialogflow by default. 
 
 ## Getting Set Up For Development
